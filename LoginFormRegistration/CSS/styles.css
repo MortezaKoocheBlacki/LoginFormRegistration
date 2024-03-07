@@ -1,0 +1,137 @@
+@font-face {
+    font-family: Signika;
+    src: url(../Fonts/Signika-VariableFont.ttf);
+}
+*, *::before, *::after{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Signika;
+    background: #6665FF;
+}
+
+.wrapper{
+    background: #FFF;
+    width: 380px;
+    padding: 40px 30px 50px 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.wrapper header{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.wrapper form{
+    margin: 40px 0px;   
+}
+
+form .field{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+form .field.shake{
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake{
+    0%, 100%{
+        margin-left: 0;
+    }
+    20%, 80%{
+        margin-left: -12px;
+    }
+    40%, 60%{
+        margin-left: 12px;
+    }
+}
+
+form .field .input-area{
+    position: relative;
+}
+
+form .field.error input{
+    border: 1px solid #DC3546;
+}
+
+form input{
+    height: 50px;
+    width: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #BFBFBF;
+    border-bottom-width: 2px;
+}
+
+form input::placeholder{
+    color: #BFBFBF;
+    font-size: 17px;
+}
+
+form .field i{
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+form .field .icon{
+    left: 15px;
+    color: #BFBFBF;
+}
+
+form .field .error-icon{
+    right: 15px;
+    color: #DC3546;
+}
+
+form .field .error-text{
+    color: #DC3546;
+    margin-top: 5px;
+    text-align: left;
+}
+
+form .field .error{
+    display: none;
+}
+
+form .field.error .error{
+    display: block;
+}
+
+form .pass-link{
+    text-align: left;
+    margin-top: -10px;
+}
+
+.wrapper a{
+    color: #5372F0;
+    text-decoration: none;
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+
+form input[type='submit']{
+    margin-top: 30px;
+    border: none;
+    background: #5372F0;
+    cursor: pointer;
+    color: #FFF;
+    transition: 0.3s ease;
+}
+
+form input[type='submit']:hover{
+    background: #2C52ED;
+}
